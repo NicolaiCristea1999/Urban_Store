@@ -1,0 +1,26 @@
+/* DarkMode.css */
+
+body.dark {
+    background: #111;
+    color: white;
+}
+
+body.dark .card {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark header {
+    background: black;
+}
+
+body.dark .card button {
+    background: white;
+    color: black;
+}
+
+body.dark #darkBtn {
+    background: #222;
+    color: white;
+    border: 1px solid white;
+}

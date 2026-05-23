@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Store - Clothing</title>
+    <link rel="stylesheet" href="css/css.css">
+    <script src="js/cos.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Urban<span>Store</span></div>
+        <nav>
+            <ul>
+                <li><a href="#products">Catalog</a></li>
+                <li><a href="pages/Despre Urban.html">Despre Noi</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Adaugă Produs</a></li>
+            </ul>
+        </nav>
+        <div class="header-buttons">
+            <a href="#" class="btn-nav">🛒 Coș <span>0</span></a>
+            <a href="#" class="btn-nav">❤️ Favorite <span>0</span></a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Bine ați venit</h2>
+            <h1>Urban Store - <span>Clothing</span></h1>
+            <div class="cta-buttons">
+                <a href="#products" class="btn-main primary">Catalogul nostru</a>
+                <a href="pages/Despre Urban.html" class="btn-main secondary">Citește mai mult</a>
+            </div>
+        
+        </div>
+    </section>
+    <div class="shop-container" id="products">
+        <div class="filter-container">
+            <div class="filter-title">Filtrează Produsele</div>
+
+            <div class="filter-grid">
+                <div class="filter-group">
+                    <label>Brand</label>
+                    <select id="filter-brand" class="filter-select">
+                        <option value="">Oricare brand</option>
+                        <option value="nike">Nike</option>
+                        <option value="jordan">Jordan</option>
+                        <option value="adidas">Adidas</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Tip Produs</label>
+                    <select id="filter-type" class="filter-select">
+                        <option value="">Toate categoriile</option>
+                        <option value="incaltaminte">Adidași / Sneakers</option>
+                        <option value="hanorace">Hanorace</option>
+                        <option value="tricouri">Tricouri</option>
+                        <option value="pantaloni">Pantaloni Sport</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Gen</label>
+                    <select id="filter-gender" class="filter-select">
+                        <option value="">Oricare</option>
+                        <option value="masculin">Masculin</option>
+                        <option value="feminin">Feminin</option>
+                        <option value="unisex">Unisex</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Model</label>
+                    <select id="filter-model" class="filter-select">
+                        <option value="">Toate modelele</option>
+                        <option value="air-force">Air Force 1</option>
+                        <option value="jordan1">Air Jordan 1</option>
+                        <option value="superstar">Adidas Superstar</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Mărime</label>
+                    <select id="filter-size" class="filter-select">
+                        <option value="">Toate mărimile</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="price-section">
+                <div class="price-title">BUGET (MDL)</div>
+                <div class="price-inputs">
+                    <div class="price-field">
+                        <span class="price-label">Preț minim</span>
+                        <input type="number" id="price-min" placeholder="0" value="0">
+                    </div>
+                    <div class="price-field">
+                        <span class="price-label">Preț maxim</span>
+                        <input type="number" id="price-max" placeholder="99000" value="5000">
+                    </div>
+                </div>
+            </div>
+
+            <hr class="filter-divider">
+            <div class="products-grid">
+
+                <div class="product-card" data-brand="adidas" data-type="incaltaminte" data-gender="unisex"
+                    data-model="superstar" data-sizes="38,39,40" data-price="1200">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=500"
+                            alt="Adidas Superstar">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Adidas Superstar Classic</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Unisex</span>
+                            <span class="product-sizes-label">Mărimi: 38, 39, 40</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">1,200 MDL</span>
+                            <div class="product-actions">
+                                <button class="add-to-favorite-btn" title="Adaugă la favorite">❤️</button>
+                                <button class="add-to-cart-btn">Adaugă în coș</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="jordan" data-type="incaltaminte" data-gender="masculin"
+                    data-model="jordan1" data-sizes="42,43,44" data-price="2500">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?q=80&w=500"
+                            alt="Air Jordan 1">
+                        <span class="product-badge sale">Hot</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Air Jordan 1 Mid</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Bărbați</span>
+                            <span class="product-sizes-label">Mărimi: 42, 43, 44</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">2,500 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="nike" data-type="incaltaminte" data-gender="unisex"
+                    data-model="air-force" data-sizes="39,40,41,42" data-price="1850">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=500"
+                            alt="Nike Air Force 1">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Nike Air Force 1 '07 All White</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Unisex</span>
+                            <span class="product-sizes-label">Mărimi: 39, 40, 41, 42</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">1,850 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="nike" data-type="incaltaminte" data-gender="masculin"
+                    data-model="air-force" data-sizes="41,42,43,44" data-price="1900">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=500"
+                            alt="Nike Air Force 1 Black">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Nike Air Force 1 Triple Black</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Bărbați</span>
+                            <span class="product-sizes-label">Mărimi: 41, 42, 43, 44</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">1,900 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="jordan" data-type="incaltaminte" data-gender="masculin"
+                    data-model="jordan1" data-sizes="40,41,42,43" data-price="3200">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=500"
+                            alt="Air Jordan 1 High">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Air Jordan 1 Retro High OG</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Bărbați</span>
+                            <span class="product-sizes-label">Mărimi: 40, 41, 42, 43</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">3,200 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="adidas" data-type="incaltaminte" data-gender="feminin"
+                    data-model="superstar" data-sizes="38,39" data-price="1350">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?q=80&w=500"
+                            alt="Adidas Superstar Bold">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Adidas Superstar Bold W</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Femei</span>
+                            <span class="product-sizes-label">Mărimi: 38, 39</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">1,350 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="nike" data-type="incaltaminte" data-gender="feminin"
+                    data-model="air-force" data-sizes="38,39,40" data-price="2100">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=500"
+                            alt="Nike Air Force Pixel">
+                        <span class="product-badge">Nou</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Nike Air Force 1 Pixel</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Femei</span>
+                            <span class="product-sizes-label">Mărimi: 38, 39, 40</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">2,100 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="jordan" data-type="incaltaminte" data-gender="unisex"
+                    data-model="jordan1" data-sizes="39,40,41,42,43" data-price="2300">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=500"
+                            alt="Air Jordan 1 Low">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Air Jordan 1 Low Shadow</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Unisex</span>
+                            <span class="product-sizes-label">Mărimi: 39, 40, 41, 42, 43</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">2,300 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="adidas" data-type="incaltaminte" data-gender="masculin"
+                    data-model="superstar" data-sizes="42,43,44" data-price="1150">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=500"
+                            alt="Adidas Superstar Black">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Adidas Superstar Triple Black</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Bărbați</span>
+                            <span class="product-sizes-label">Mărimi: 42, 43, 44</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">1,150 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="nike" data-type="incaltaminte" data-gender="masculin"
+                    data-model="air-force" data-sizes="41,42,43" data-price="2700">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?q=80&w=500"
+                            alt="Nike Sneaker Premium">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Nike SB Pro Edition</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Bărbați</span>
+                            <span class="product-sizes-label">Mărimi: 41, 42, 43</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">2,700 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="adidas" data-type="incaltaminte" data-gender="unisex"
+                    data-model="superstar" data-sizes="39,40,41,42" data-price="1650">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?q=80&w=500"
+                            alt="Adidas Forum">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Adidas Forum Classic Low</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Unisex</span>
+                            <span class="product-sizes-label">Mărimi: 39, 40, 41, 42</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">1,650 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="jordan" data-type="incaltaminte" data-gender="masculin"
+                    data-model="jordan1" data-sizes="42,43,44" data-price="3100">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=500"
+                            alt="Jordan Zoom">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Air Jordan 1 Zoom Air CMFT</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Bărbați</span>
+                            <span class="product-sizes-label">Mărimi: 42, 43, 44</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">3,100 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="nike" data-type="incaltaminte" data-gender="masculin"
+                    data-model="air-force" data-sizes="40,41,42,43" data-price="2250">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=500"
+                            alt="Nike React">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Nike Air Force 1 React Light</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Bărbați</span>
+                            <span class="product-sizes-label">Mărimi: 40, 41, 42, 43</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">2,250 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="adidas" data-type="incaltaminte" data-gender="unisex"
+                    data-model="superstar" data-sizes="38,39,40,41,42" data-price="1950">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?q=80&w=500"
+                            alt="Adidas Urban">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Adidas NMD_R1 Run Boost</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Unisex</span>
+                            <span class="product-sizes-label">Mărimi: 38, 39, 40, 41, 42</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">1,950 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="jordan" data-type="incaltaminte" data-gender="feminin"
+                    data-model="jordan1" data-sizes="38,39,40" data-price="2600">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?q=80&w=500"
+                            alt="Jordan Femei">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Air Jordan 1 Low Pink Velvet</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Femei</span>
+                            <span class="product-sizes-label">Mărimi: 38, 39, 40</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">2,600 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="nike" data-type="incaltaminte" data-gender="masculin"
+                    data-model="air-force" data-sizes="42,43,44" data-price="2400">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=500"
+                            alt="Nike Waterproof">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Nike Air Force 1 Gore-Tex</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Bărbați</span>
+                            <span class="product-sizes-label">Mărimi: 42, 43, 44</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">2,400 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="adidas" data-type="incaltaminte" data-gender="unisex"
+                    data-model="superstar" data-sizes="38,39,40,41" data-price="1400">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=500"
+                            alt="Stan Smith">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Adidas Stan Smith Sustainable</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Unisex</span>
+                            <span class="product-sizes-label">Mărimi: 38, 39, 40, 41</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">1,400 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="jordan" data-type="incaltaminte" data-gender="unisex"
+                    data-model="jordan1" data-sizes="40,41,42,43" data-price="2900">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=500"
+                            alt="Jordan Vintage">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Air Jordan 1 Mid Grey Fog</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Unisex</span>
+                            <span class="product-sizes-label">Mărimi: 40, 41, 42, 43</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">2,900 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="nike" data-type="incaltaminte" data-gender="unisex"
+                    data-model="air-force" data-sizes="39,40,41,42,43,44" data-price="950">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=500"
+                            alt="Nike Budget">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Nike Court Vision Low</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Unisex</span>
+                            <span class="product-sizes-label">Mărimi: 39-44</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">950 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="adidas" data-type="incaltaminte" data-gender="masculin"
+                    data-model="superstar" data-sizes="41,42,43,44" data-price="1800">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?q=80&w=500"
+                            alt="Adidas Futuristic">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Adidași / Sneakers</span>
+                        <h3 class="product-title">Adidas Ozelia Neo-Futurism</h3>
+                        <div class="product-meta">
+                            <span class="product-gender-label">Bărbați</span>
+                            <span class="product-sizes-label">Mărimi: 41, 42, 43, 44</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">1,800 MDL</span>
+                            <button class="add-to-cart-btn">Vezi Detalii</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-heading">
+            <span>CONTACT</span>
+            <h2>Ai o întrebare? Te ajutăm să găsești mărimea potrivită.</h2>
+            <p>Scrie-ne sau sună-ne, iar echipa Urban Store îți va răspunde rapid. Livrăm direct în toată Moldova.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-card contact-info-card">
+                <h3>Informații de contact</h3>
+                <div class="contact-info-item">
+                    <strong>Telefon</strong>
+                    <a href="tel:+37378136788">+373 781 36 788</a>
+                </div>
+                <div class="contact-info-item">
+                    <strong>Instagram</strong>
+                    <a href="https://instagram.com/Urban_Store.md" target="_blank">@Urban_Store.md</a>
+                </div>
+                <div class="contact-info-item">
+                    <strong>Email</strong>
+                    <a href="mailto:stua7231@gmail.com">stua7231@gmail.com</a>
+                </div>
+                <div class="contact-info-item">
+                    <strong>Adresă</strong>
+                    <span>Strada 31 August 1989 12, MD-3909, Cahul, Moldova</span>
+                </div>
+                <div class="contact-card-buttons">
+                    <a href="tel:+37378136788" class="btn-main primary">Sună acum</a>
+                    <a href="https://github.com/NicolaiCristea1999" target="_blank" class="btn-main secondary">Mergi la GitHub</a>
+                    <a href="mailto:stua7231@gmail.com" class="btn-main secondary">Trimite email</a>
+                </div>
+            </div>
+
+            <div class="contact-card contact-form-card">
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2892.736858274584!2d28.21359641552374!3d45.903394723524366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b0f187c1f38bed%3A0x1fb6076aeafb2d4c!2sPiata%20Centrala!5e0!3m2!1sro!2smd!4v1701920200000!5m2!1sro!2smd" width="100%" height="320" style="border:0; border-radius:16px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <form class="contact-form" onsubmit="return false;">
+                    <h3>Lasă-ne un mesaj</h3>
+                    <div class="contact-form-grid">
+                        <label>Nume
+                            <input type="text" placeholder="Numele tău">
+                        </label>
+                        <label>Email
+                            <input type="email" placeholder="Email-ul tău">
+                        </label>
+                        <label>Mesaj
+                            <textarea rows="5" placeholder="Spune-ne ce vrei"></textarea>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-main primary">Trimite</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-banner">
+        <div class="contact-banner-inner">
+            <div class="banner-text">
+                <p>VREI SĂ-ȚI ALEGEM ÎMPREUNĂ MĂRIMEA?</p>
+                <h3>Scrie-ne și îți recomandăm rapid ce ți se potrivește, în funcție de înălțime și greutate.</h3>
+            </div>
+            <div class="banner-actions">
+                <a href="#contact" class="btn-main primary">Scrie-ne</a>
+                <a href="#products" class="btn-main secondary">Cumpără acum</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- cos de cumparaturi -->
+    <div id="cart-modal" class="custom-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🛒 Coșul tău de cumpărături</h2>
+                <button class="close-modal-btn">✕</button>
+            </div>
+            <div id="cart-items-container" class="modal-body">
+                <p class="empty-message">Coșul este gol în acest moment.</p>
+            </div>
+            <div class="modal-footer">
+                <div class="total-price-zone">Total: <span id="cart-total-price">0</span> MDL</div>
+                <button class="checkout-btn">Finalizează Comanda</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="favorite-modal" class="custom-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>❤️ Produse Favorite</h2>
+                <button class="close-modal-btn">✕</button>
+            </div>
+            <div id="favorite-items-container" class="modal-body">
+                <p class="empty-message">Nu ai adăugat niciun produs la favorite.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
